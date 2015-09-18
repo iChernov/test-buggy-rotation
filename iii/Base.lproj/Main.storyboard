@@ -1,25 +1,72 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img" translatesAutoresizingMaskIntoConstraints="NO" id="mvD-wI-x3h">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Some text goes here" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WhX-o3-YYH">
+                                <rect key="frame" x="35" y="269" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Phr-oK-aXc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9SJ-Ak-koK">
+                                <rect key="frame" x="137" y="386" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iAT-7p-f3g"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pww-n9-Y2G">
+                                <rect key="frame" x="112" y="182" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="2AP-MP-18v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mvD-wI-x3h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2Ne-dF-z7S"/>
+                            <constraint firstItem="WhX-o3-YYH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3K9-AX-wGK"/>
+                            <constraint firstItem="9SJ-Ak-koK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3lf-93-kPx"/>
+                            <constraint firstAttribute="trailing" secondItem="mvD-wI-x3h" secondAttribute="trailing" id="8BL-vd-zDZ"/>
+                            <constraint firstItem="pww-n9-Y2G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JIr-xQ-vPb"/>
+                            <constraint firstItem="WhX-o3-YYH" firstAttribute="top" secondItem="pww-n9-Y2G" secondAttribute="bottom" constant="57" id="QN2-XV-4pt"/>
+                            <constraint firstItem="9SJ-Ak-koK" firstAttribute="top" secondItem="WhX-o3-YYH" secondAttribute="bottom" constant="87" id="U7W-Pc-Ovz"/>
+                            <constraint firstItem="WhX-o3-YYH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VL9-ZM-XDM"/>
+                            <constraint firstItem="mvD-wI-x3h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gHm-Es-PVN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mvD-wI-x3h" secondAttribute="bottom" id="kIt-8K-fYO"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tF" destination="WhX-o3-YYH" id="nAY-ap-HBc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="img" width="534" height="401"/>
+    </resources>
 </document>
